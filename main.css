@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background: black;
+  color: white;
+}
+#loader-div {
+  margin-left: 2rem;
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loader-center {
+  display: flex;
+}
+
+.loader-center h1 {
+  padding: 2.3rem;
+}
+
+.loader {
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: loader 2s linear infinite;
+  border-top: 16px solid blue;
+  border-right: 16px solid red;
+  border-bottom: 16px solid green;
+  border-left: 16px solid orange;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Container */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: rgb(75, 129, 255);
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}
+
+/* Posts */
+section h2 {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 900px) {
+  section .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section .container {
+    grid-template-columns: 1fr;
+  }
+}
+.post {
+  background: #f4f4f4;
+  color: black;
+  border-radius: 20px;
+  border: none;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.post-time {
+  border-bottom: 2px solid #ccc;
+}
+
+.post-content {
+  margin-top: 0.5rem;
+}
